@@ -417,7 +417,7 @@ ul{
 
 
 .c-card:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color: var(--crimson);
     box-shadow: var(--crimson) 0px 5px 15px;
 }
@@ -697,14 +697,17 @@ ul{
     transform: scale(0.95);
 }
 
+.music-img{
+    max-width: 600px;
+    display: flex;
+    align-items: center;    
+    padding-right: 30px;
+}
 
 
-
-.music-img img{
+.music-img img{     
     transition: .5s;
-    min-height: 90%;
-    max-width: 90%;
-    padding-left: 70px;
+    
 }
 
 .music-img img:hover{
@@ -902,6 +905,13 @@ ul{
     transform: scale(1.15);
     filter: drop-shadow( 10px 7px 10px #DB4444);
 }
+
+.b-card--body img:hover{
+    transform: scale(1.15);
+    filter: drop-shadow( 10px 7px 10px #DB4444);
+}
+
+
 /* .p-card--checkbox{
     appearance: none;
     width: 12px;
@@ -1069,6 +1079,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s all;
 }
 
 .contact-img{
@@ -1099,12 +1110,11 @@ ul{
 }
 
 .contact-text{
-
     font-family: "Poppins";
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    text-align: left;
+    text-align: center;
     color: var(--black);
 }
 
@@ -1116,7 +1126,10 @@ ul{
 }
 
 
-
+.contact-main--img:hover{
+    box-shadow: rgba(0, 0, 0, 0.35)0px 2px 12px 6px;
+    transform: scale(1.1);
+}
 
 
 
@@ -1384,6 +1397,13 @@ ul{
         " perfume speakers "
         " perfume speakers ";
         gap: 32px 30px;
+    }
+
+    .music-img img{
+        transition: .5s;
+        padding-left: 70px;
+        max-width: 100%;
+        min-height: 100%;
     }
     
     .newarrival-content{
