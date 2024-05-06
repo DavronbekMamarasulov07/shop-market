@@ -430,6 +430,7 @@ ul{
     transform: scale(1.1);
     background-color: var(--crimson);
     box-shadow: var(--crimson) 0px 5px 15px;
+    border: none;
 }
 
 .c-card:hover h4{
