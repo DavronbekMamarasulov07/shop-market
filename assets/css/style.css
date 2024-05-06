@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
 a{
     text-decoration: none;
 }
@@ -11,6 +19,8 @@ a{
 ul{
     list-style-type: none;
 }
+
+
 
 :root {
     --black: #000;
@@ -461,14 +471,7 @@ ul{
     color: var(--gray);
 }
 
-/* .b-card{
-    transition: .5s all;
-}
 
-.b-card:hover{
-    transform: scale(1.1);
-    box-shadow: var(--crimson) 0px 5px 15px;
-} */
 
 .prduct-btn:active{
     transform: scale(0.94);
@@ -576,9 +579,6 @@ ul{
     opacity: 50%;
 }
 
-/* #music{
-    background-color: var(--black);
-} */
 
 .music-content{
     background-color: var(--black);
@@ -950,10 +950,11 @@ ul{
 
 .n-cards{
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-    "electronic electronic  collections collections"
-    "electronic electronic  speakers perfume"
-    "electronic electronic  speakers perfume";
+    "electronic electronic collections collections"
+    "electronic electronic speakers perfume"
+    "electronic electronic speakers perfume";
     gap: 32px 30px;
 }
 
@@ -1000,7 +1001,6 @@ ul{
     background-image: url(../images/new-arrival4.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-position-x: center;
     display: flex;
     align-items: end;
     justify-content: start; 
@@ -1131,6 +1131,24 @@ ul{
     transform: scale(1.1);
 }
 
+.speakers .n-card--title{
+    white-space: wrap;
+}
+
+.arrow-stick{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: var(--gray);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+}
+
 
 
 
@@ -1228,6 +1246,7 @@ ul{
 
     .n-cards{
         display: grid;
+        grid-template-columns: repeat(2,1fr);
         grid-template-areas: 
         " collections collections" 
         " collections collections" 
@@ -1383,7 +1402,10 @@ ul{
         padding-right: 70px;
         gap:0 20px ;
     }
-
+    .speakers,.perfume{
+        padding: 24px 0 34px 24px;
+        gap: 8px 0;
+    }
 
 }
 
@@ -1462,6 +1484,7 @@ ul{
 
     .n-cards{
         display: grid;
+        grid-template-columns: 2fr 4fr;
         grid-template-areas: 
         " collections collections"
         " electronic electronic"
@@ -1469,17 +1492,20 @@ ul{
         " speakers speakers ";
         gap: 32px 30px;
     }
+
+    
     
     .newarrival-content{
         margin-top: 80px;
     }
 
     .n-card-speakers, .n-card-perfume {
-        background-position-x: right;
-        padding: 120px 30px 0 0;
+        background-position-x: 82%;
+        padding: 120px 70px 0 0;
 
         
     }
+   
 }
 
 @media only screen and (max-width:630px){
@@ -1498,6 +1524,42 @@ ul{
         gap:40px 68px;
         margin: 50px auto;
     }
+
+.n-card--title{
+    font-family: "Inter";
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: var(--gray-2);
+}
+
+
+
+.n-card--text{
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: var(--gray-2);
+    max-width: 200px;
+}
+
+.n-card-link{
+    text-transform: capitalize;
+    font-family: "Poppins";
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: var(--white);
+    border-bottom: 1px solid transparent;
+    transition: .3s;
+}
+
+
 }   
 
 @media only screen and (max-width:586px){
@@ -1517,7 +1579,7 @@ ul{
     }
 
     .n-card--wrapper{
-        max-width: 180px;
+        /* max-width: 180px; */
     }
 
     .search{
@@ -1526,8 +1588,8 @@ ul{
     }
 
     .n-card-speakers, .n-card-perfume {
-        background-position-x: center;
-        padding: 120px 30px 0 0;
+        background-position-x: 80%;
+        padding: 120px 10px 0px 0;
 
         
     }
@@ -1554,6 +1616,7 @@ ul{
         font-size: 14px;
         font-weight: 400;
     }
+    
     
     
     .music-btn{
@@ -1629,6 +1692,42 @@ ul{
     .contact-text{
         font-size: 12px;
     }
+    .p-button{
+        padding: 12px 34px;
+        background-color: var(--crimson);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        margin: 0  auto;
+        border-radius: 4px;
+        transition: .4s;
+    }
+    
+    .p-button a{
+        font-family: "Poppins";
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        color: var(--gray-2);
+    }
+
+.arrow-stick{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: var(--gray);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 40px;
+    width: 40px;
+}
 
 }
 
